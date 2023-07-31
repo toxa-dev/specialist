@@ -77,6 +77,7 @@ a {
 }
 
 .main__a-block__h1 {
+    font-size: 45px;
     margin-bottom: -0px;
     line-height: 0.9;
     text-transform: uppercase;
@@ -109,6 +110,10 @@ a {
     justify-content: center;
 }
 
+.main-c-block {
+    margin: 100px 0 20px;
+}
+
 .main-c-block__ul::before {
     content: "";
     position: absolute;
@@ -136,6 +141,10 @@ a {
 
   }
 
+
+.main__footer {
+    padding: 25px 0 40px 0;
+}
 
 .main__footer__ul {
     padding: 0;
