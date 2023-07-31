@@ -3,43 +3,196 @@ body {
     padding: 0;
     background-color: wheat;
     min-width: 100vw;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.contaner {
-    display: flex;
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.image-container__primary-image {
+    width: 100%;
+    height: auto;
+    display: block; /* to remove gap after image*/
 }
 
 .content {
     background-color: #2b2b2b;
-    width: 65%;
-    height: 100vh;
-    opacity: 0.96;
-    transform: skewX(-30deg) translateX(-280px)
+}
+.content__header {
+    display: flex;
+    justify-content: space-between;
+}
+.content__logo-image-container {
+    height: 170px;
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-end;
+    color: white;box-shadow: 0px 0px 2px #ffea00;
+    width: 125px;
+    justify-content: center;
 }
 
- .content::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 100%;
+.content__logo-image {
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: super;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.content__logo-text-container {
+    align-self: center;
+    font-weight: bold;
+    padding: 15px 5px;
+}
+
+.content__logo-text {
+    font-size: 33px;
+    padding: 3px;
+}
+
+.content__logo-image-container,
+.content__logo-text-container {
     background-color: #ffea00;
-    transform: skewX(0deg);
+}
+
+.main {
+    color: white;
+}
+
+.main__a-block {
+    text-align: center;
+}
+
+.main__a-block__h1 {
+    margin-bottom: -0px;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.main__a-block__span {
+    color: #ffea00;
+}
+
+.main__b-block {
+    display: flex;
+    align-items: center;
+    margin-left: 2.4rem;
+    margin-top: 3rem;
+}
+
+.main__b-block__p {
+    margin-left: 1rem;
+}
+
+.main-c-block__ul {
+    list-style: none;
+    display: flex;
+    border: 3px solid white;
+    border-right: none;
+    padding: 15px 5px;
+    margin: 15px 62px 15px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.main-c-block__ul::before {
+    content: "";
     position: absolute;
     top: 0;
-    right: -20px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border: 3px solid white;
+    border-left: none;
+    margin-top: -3px;
+    transform-origin: bottom left;
+    transform: skew(-30deg, 0deg);
 }
 
-.image {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
-    background-image: url("https://plus.unsplash.com/premium_photo-1664910255137-5462726ff06b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
-    background-size: cover;
+.main-c-block__li {
+    padding: 0 7px;
+}
+
+.main-c-block__li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #ffea00; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 0.8em; /* Also needed for space (tweak if needed) */
+
+  }
+
+
+.main__footer__ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main__footer__li {
+}
+
+.main__footer__a {
+    margin: 0 10px;
+}
+
+.main__footer__a:hover {
+    color: #ffea00;
+}
+
+.fa-brands {
+    padding-right: 6px;
+    color: red;
+}
+
+@media screen and min-width(1200px) {
+    .contaner {
+        display: flex;
+    }
+
+    .content {
+        background-color: #2b2b2b;
+        width: 65%;
+        height: 100vh;
+        opacity: 0.96;
+        transform: skewX(-30deg) translateX(-280px)
+    }
+
+    .content::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 100%;
+        background-color: #ffea00;
+        transform: skewX(0deg);
+        position: absolute;
+        top: 0;
+        right: -20px;
+    }
+
+    .image-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        background-image: url("https://plus.unsplash.com/premium_photo-1664910255137-5462726ff06b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+    }
 }
